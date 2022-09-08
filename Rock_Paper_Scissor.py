@@ -16,6 +16,7 @@ while(True):
     i = 0
     s = 0
     c = 0
+    t = 0
     while(i<5):
      r=random.choice(l1)
      n=int(input("ENTER: \n"
@@ -38,6 +39,11 @@ while(True):
         print("CONGRATULATIONS! YOU'VE WON")
         s += 1
 
+     elif n==1 and r=="Rock" or n==2 and r=="Paper" or n==3 and r=="Scissor":
+         print(f"YOU-{r}              COMPUTER-{r}")
+         print("TIE")
+         t +=1
+
      elif n>3 or n<1:
          print("PLEASE ENTER A VALID INPUT")
          continue
@@ -55,13 +61,13 @@ while(True):
      i+=1
      print("-------------------------------------------------")
      print("                   SCOREBOARD                    ")
-     print(f"COMPUTER SCORE:{c}                YOUR SCORE:{s}")
+     print(f"COMPUTER SCORE:{c}    TIE:{t}     YOUR SCORE:{s}")
      print("-------------------------------------------------")
 
     if s>c:
         print("CONGRATULATIONS! YOU'VE WON THE GAME ")
     elif s==c:
-        print("TIE")
+        print("GAME TIE")
     else:
         print("BETTER TRY NEXT TIME")
     print("----------------GAME OVER---------------------")
